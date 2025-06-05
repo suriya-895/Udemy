@@ -11,8 +11,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border-bottom: solid 1px black;
+    gap: 10px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+    
 }
 
 .navbar__s1 h1 {
@@ -22,36 +28,58 @@ body {
 
 .navbar__s2 {
     border: solid 1px black;
-    width: 60%;
+    width: 65%;
     height: 30px;
     display: flex;
     align-items: center;
     border-radius: 30px;
     gap: 20px;
     padding: 10px;
+    align-items: center;
 }
-    
-
 .navbar__s2 input {
+    display: flex;
     border: none;
     font-size: 15px;
-    padding: 5px;
+    padding: px;
+    background-color: transparent;
+    
 }
-
 .navbar__s2 input:focus {
     outline: none;
 }
-
 .navbar__s3 {
     display: flex;
+    gap: 10px;
     align-items: center;
-    gap: 30px;
+    vertical-align: top;
 }
+.my__learning{
+    position: relative;
+    cursor: pointer;
+}
+.my__learning__popup{
+    position: absolute;
+    border: black solid 2px;
+    background-color: white;
+    padding: 10px;
+    top: 25px;
+    border-radius: 10px;
+    width: 100px;
+    display: none;
+}
+.my__learning:hover .my__learning__popup{
+    display: block;
+}
+
+
+
 
 .section__2 {
     display: flex;
     justify-content: space-around;
     padding: 5px;
+    z-index: 2;
 }
 
 .section__2 p {
@@ -60,11 +88,25 @@ body {
     padding: 10px;
     background-color: rgb(218, 32, 246);
 }
+.section__sale{
+    position: relative;
+}
 
 .section__sale img {
     width: 100%;
 }
 
+.sale__offer{
+    width:400px;
+    border: solid black 1px;
+    padding: 2%;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    border-radius:20px;
+    
+}
 .section__card__title {
     padding: 10px;
 }
@@ -82,7 +124,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
 }
 
 
@@ -94,7 +136,7 @@ body {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .section__topic p {
@@ -104,20 +146,23 @@ body {
     padding: 5px;
 }
 
-.section__footer{
+.section__footer {
     background-color: black;
     color: white;
     padding: 20px;
-   
+
 }
-.footer__point{
+
+.footer__point {
     display: flex;
-    
+
     gap: 100px;
 }
-.footer__point p{
+
+.footer__point p {
     padding: 5px;
 }
-.section__footer h1{
+
+.section__footer h1 {
     padding-top: 50px;
 }
