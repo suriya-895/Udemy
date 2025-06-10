@@ -5,25 +5,28 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    width: 100%;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: solid 1px black;
-    gap: 10px;
+    padding: 20px;
+    justify-content: space-around;
+    gap: 20px;
+    vertical-align: top;
+    border-bottom: solid black 1px;
     position: sticky;
     top: 0px;
     background-color: white;
     z-index: 1;
+    align-items: center;
 
 }
 
+
 .navbar__s1 h1 {
     color: rgb(218, 32, 246);
-    font-weight: 500;
+    font-weight: 500px;
 }
 
 .navbar__s2 {
@@ -71,6 +74,7 @@ body {
     top: 25px;
     border-radius: 10px;
     width: 100px;
+    right: 0px;
     display: none;
 }
 
@@ -127,27 +131,38 @@ body {
     animation-fill-mode: forwards;
 
 }
-@keyframes scale{
-    0%{
+
+@keyframes scale {
+    0% {
         transform: scale(0);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: scale(1);
-        opacity:1;
+        opacity: 1;
     }
 }
 
 .section__card__title {
-    padding: 10px;
+    width: 250px;
+}
+
+.card__1,
+.card__2,
+.card__3,
+.card__4 {
+    flex-grow: 1;
+    flex-basis: 20px;
+    margin: 5px;
 }
 
 .card__1 img,
 .card__2 img,
 .card__3 img,
 .card__4 img {
-    width: 200px;
-    height: 150px;
+    height: 50%;
+    width: 100%;
 }
 
 .section__card {
@@ -196,4 +211,31 @@ body {
 
 .section__footer h1 {
     padding-top: 50px;
+}
+
+/* display */
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .card__1,
+    .card__2,
+    .card__3,
+    .card__4 {
+        flex-basis: 40%;
+    }
+
+    .section__2 {
+        display: none;
+    }
+    .navbar__s3{
+        display: none;
+    }
+    .sale__offer{
+        width: 200px;
+    }
 }
